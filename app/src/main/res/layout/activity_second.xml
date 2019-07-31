@@ -29,14 +29,14 @@
         android:id="@+id/btn_subtract"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="112dp"
         android:backgroundTint="#7FE8D3"
         android:text="Subtract"
         android:textColor="#7C0F0F"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_add"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="@+id/btn_add"
         app:layout_constraintTop_toBottomOf="@+id/btn_add" />
 
@@ -45,14 +45,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="124dp"
         android:backgroundTint="#7FE8D3"
         android:text="Add"
         android:textColor="#7C0F0F"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tv_display"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="@+id/tv_display"
         app:layout_constraintTop_toBottomOf="@+id/tv_display" />
 </android.support.constraint.ConstraintLayout>
