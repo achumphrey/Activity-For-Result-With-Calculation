@@ -12,6 +12,8 @@ public class SecondActivity extends AppCompatActivity {
 
     private TextView tv_dispay;
     private Button btn_add;
+    private Button btn_divide;
+    private Button btn_multiply;
     private Button btn_subtract;
     private int num_1;
     private int num_2;
@@ -27,6 +29,8 @@ public class SecondActivity extends AppCompatActivity {
         tv_dispay = findViewById(R.id.tv_display);
         btn_add = findViewById(R.id.btn_add);
         btn_subtract = findViewById(R.id.btn_subtract);
+        btn_divide = findViewById(R.id.btn_divide);
+        btn_multiply = findViewById(R.id.btn_multiply);
         Intent intent = getIntent();
 
         num_1 = Integer.parseInt(intent.getStringExtra(MainActivity.NUM_1));
@@ -47,6 +51,20 @@ public class SecondActivity extends AppCompatActivity {
                sendBackSubtract();
             }
         });
+
+        btn_multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendBackMultiply();
+            }
+        });
+
+        btn_divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendBackDivide();
+            }
+        });
     }
 
     public void sendBackAdd(){
@@ -63,6 +81,34 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent();
         result = num_1 - num_2;
         intent.putExtra(SecondActivity.RESULT, Integer.toString(result));
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
+    public void sendBackMultiply(){
+
+        Intent intent = new Intent();
+        result = num_1 * num_2;
+        intent.putExtra(SecondActivity.RESULT, Integer.toString(result));
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
+    public void sendBackDivide(){
+
+        Double db = new Double(num_2);
+
+        String strResult = "";
+
+        if (db == 0) {
+            strResult = "Er!";
+        } else {
+            strResult = String.format("%.2f", (num_1/ db));
+        }
+
+        Intent intent = new Intent();
+     //   result = num_1 / num_2;
+        intent.putExtra(SecondActivity.RESULT, strResult);
         setResult(RESULT_OK, intent);
         finish();
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/color_bkg"
     tools:context=".SecondActivity">
 
@@ -11,19 +11,18 @@
         android:id="@+id/tv_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:textColor="#BD08E0"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
         android:hint="From Main"
         android:inputType="textPersonName"
         android:textAlignment="gravity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="#BD08E0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        />
+<!--
 
     <Button
         android:id="@+id/btn_subtract"
@@ -55,4 +54,69 @@
         app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="@+id/tv_display"
         app:layout_constraintTop_toBottomOf="@+id/tv_display" />
-</android.support.constraint.ConstraintLayout>
+
+-->
+    <GridLayout android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:id="@+id/grid_button"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:background="#2196F3"
+            android:text="add"
+            android:textSize="20sp" />
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_subtract"
+            android:textSize="20sp"
+            android:text="Subtract"
+            android:layout_marginLeft="5dp"
+            android:background="#CDDC39"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"/>
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_multiply"
+            android:textSize="20sp"
+            android:text="Multiply"
+            android:layout_marginTop="5dp"
+            android:background="#FFEB3B"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_divide"
+            android:textSize="20sp"
+            android:text="Divide"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="#009688"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"/>
+
+    </GridLayout>
+
+    </LinearLayout>
