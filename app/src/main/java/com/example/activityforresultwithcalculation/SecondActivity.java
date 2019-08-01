@@ -96,7 +96,7 @@ public class SecondActivity extends AppCompatActivity {
 
     public void sendBackDivide(){
 
-        Double db = new Double(num_2);
+        Double db = new Double(num_2); //convert to a double
 
         String strResult = "";
 
@@ -107,7 +107,6 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent();
-     //   result = num_1 / num_2;
         intent.putExtra(SecondActivity.RESULT, strResult);
         setResult(RESULT_OK, intent);
         finish();
